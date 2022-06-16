@@ -36,8 +36,8 @@ export const Header = () => {
 
   return (
     <div className="w-full h-full overflow-hidden">
-      <div className="h-24 w-full flex justify-between bg-blue-50 ">
-        <div className="h-full w-16 py-8 ml-8">
+      <div className="h-20 w-full flex justify-between bg-blue-50 ">
+        <div className="h-full w-16 py-6 ml-8">
           <Link to="/">
             <AiOutlineHome size={40} />
           </Link>
@@ -47,7 +47,11 @@ export const Header = () => {
             <>
               <div className="py-4 cursor-pointer mr-8">
                 <Link to={"/profile/" + user._id}>
-                  <h3>プロフィールへ</h3>
+                  <img
+                    alt=""
+                    className="h-12 rounded-full hover:opacity-75 cursor-pointer"
+                    src={user?.picture}
+                  />
                 </Link>
               </div>
               <div className="py-4 cursor-pointer mr-8">

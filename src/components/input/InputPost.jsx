@@ -32,7 +32,7 @@ export const InputPost = ({ inputText }) => {
     } catch (error) {}
   };
   return (
-    <div className="flex-1 bg-gray-50 max-w-2xl mx-auto">
+    <div className="flex-1 bg-gray-50 max-w-xl mx-auto">
       <form onSubmit={handleSubmit(onSubmit)}>
         <label className="sr-only">{inputText}</label>
         <div className="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">

@@ -17,7 +17,7 @@ export const FollowersList = (user) => {
             <div className="font-bold -mt-12 flex m-16">
               {user.user.username}
             </div>
-            <div className="-mt-16 flex m-16"></div>
+            <div className="-mt-16 flex m-16">{user.user.profile}</div>
           </div>
           <div className="w-full mb-10">
             <p className=" -order-1 text-base text-black-600 -mt-12 m-24">
