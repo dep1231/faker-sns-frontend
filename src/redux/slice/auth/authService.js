@@ -1,8 +1,8 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-const API_URL =
-  process.env.REACT_APP_API_URL_USER ||
-  process.env.REACT_APP_API_URL_USER_PRODUCTION;
+const API_URL = "https://faker-sns-api.herokuapp.com/api/user/";
+// process.env.REACT_APP_API_URL_USER ||
+// process.env.REACT_APP_API_URL_USER_PRODUCTION;
 
 // register user
 const register = async (userData) => {
