@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_URL = process.env.REACT_APP_API_URL_POST;
+const API_URL =
+  process.env.REACT_APP_API_URL_POST ||
+  process.env.REACT_APP_API_URL_POST_PRODUCTION;
 
 // 投稿の取得
 const getPostFind = async (postId) => {
