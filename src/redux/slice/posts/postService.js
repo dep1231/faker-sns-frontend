@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const API_URL =
-  process.env.REACT_APP_API_URL_POST ||
+  // process.env.REACT_APP_API_URL_POST ||
   process.env.REACT_APP_API_URL_POST_PRODUCTION;
 
 const UPLOAD_API_URL =
-  process.env.REACT_APP_API_URL_UPLOAD ||
+  // process.env.REACT_APP_API_URL_UPLOAD ||
   process.env.REACT_APP_API_URL_UPLOAD_PRODUCTION;
 // 投稿機能
 const createPost = async (postData, token) => {

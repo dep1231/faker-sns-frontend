@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { InputPost } from "../../components/input/InputPost";
 import { getAllPosts } from "../../redux/slice/posts/postSlice";
-import { reset } from "../../redux/slice/auth/authSlice";
 import { DataPost } from "../../components/posts/DataPost";
 import { Spinner } from "../../components/spinner/Spinner";
 
