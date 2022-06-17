@@ -5,6 +5,7 @@
 # アプリケーション機能、技術一覧
 
 ・認証機能<br>
+・簡単ログイン機能<br>
 ・テキスト投稿機能<br>
 ・画像投稿機能<br>
 ・投稿削除機能<br>
@@ -27,6 +28,7 @@ MongoDB、Express、React、NodeJs を使用して構築しています。
 ・react-router-dom<br>
 ・react-hook-form<br>
 ・axios<br>
+・react-toastify<br>
 ・react icons<br>
 
 # 使用したバックエンドライブラリ一覧
@@ -38,8 +40,13 @@ MongoDB、Express、React、NodeJs を使用して構築しています。
 ・jsonwebtoken<br>
 ・bcrypt<br>
 ・cors<br>
-・coloudinary
+・coloudinary<br>
 
-# アプリケーション URL
+# デプロイ
 
-デプロイ 後に url をはる
+フロントエンド netlify
+バックエンド heroku
+
+# アプリケーションリンク
+
+[Link](https://admirable-creponne-37f7df.netlify.app/)

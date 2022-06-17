@@ -69,8 +69,10 @@ export const Profile = () => {
           <div className="relative bottom-12 flex justify-end items-stretch mr-10 mb-10">
             {user?._id === users?._id ? <UpdateModal /> : null}
           </div>
-          <div className="mb-5 px-3 text-center text-sky-500">
-            {users?.profile}
+          <div className="flex justify-start relative bottom-14 ml-1">
+            <div className="mb-5 px-3 text-center text-gray-500">
+              {users?.profile}
+            </div>
           </div>
           <div className="flex container items-center justify-start">
             <Link to={"/followings/" + params?.id}>

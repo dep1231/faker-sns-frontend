@@ -91,7 +91,7 @@ export const UpdateCoverModal = () => {
                           <img
                             src={users?.cover}
                             alt=""
-                            className="h-48 w-full object-cover hover:opacity cursor-pointer"
+                            className="h-48 w-full object-cover hover:opacity-70 cursor-pointer"
                           />
                         </label>
                         <input

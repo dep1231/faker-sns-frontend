@@ -17,7 +17,6 @@ const createComment = async (postData, token) => {
       Authorization: `Bearer ${token}`,
     },
   };
-  console.log(postData.postData);
   const { data } = await axios.post(
     API_URL + "comment",
     postData.postData,

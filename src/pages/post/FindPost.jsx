@@ -50,7 +50,7 @@ export const FindPost = () => {
             </div>
           </div>
           <div className="w-full mb-10">
-            <p className=" -order-1 text-base text-black-600 -mt-12 m-24">
+            <p className=" -order-1 text-base text-black-600 -mt-16 m-8">
               {comments?.desc}
             </p>
           </div>

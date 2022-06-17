@@ -6,6 +6,7 @@ import { reset, logout, authLogin } from "../../redux/slice/auth/authSlice";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { Spinner } from "../../components/spinner/Spinner";
 
 export const Header = () => {
@@ -16,6 +17,7 @@ export const Header = () => {
   const onLogout = () => {
     dispatch(logout());
     dispatch(reset());
+    toast("ログアウトしました");
     navigate("/");
   };
 
@@ -29,6 +31,7 @@ export const Header = () => {
       if (isLoading) {
         return <Spinner />;
       }
+      toast("ログインしました");
     } catch (error) {
       console.log(error);
     }

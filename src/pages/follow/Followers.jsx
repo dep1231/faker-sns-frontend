@@ -38,7 +38,7 @@ export const Followers = () => {
         </div>
       </div>
       {users?.followers?.map((user) => (
-        <FollowersList key={user._id} user={user} />
+        <FollowersList key={user.id} user={user} />
       ))}
     </>
   );

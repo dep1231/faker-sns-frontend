@@ -29,7 +29,7 @@ export const CommentList = ({ comment, username }) => {
           </div>
         </div>
         <div className="w-full mb-10">
-          <p className=" -order-1 text-base text-black-600 -mt-12 m-24">
+          <p className=" -order-1 text-base text-black-600 -mt-28 m-10">
             {comment.comment}
           </p>
         </div>

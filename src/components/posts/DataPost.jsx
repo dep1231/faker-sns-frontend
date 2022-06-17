@@ -46,6 +46,16 @@ export const DataPost = ({ post }) => {
                 timeZone: "Asia/Tokyo",
               })}
             </div>
+            {user?._id === post.user._id ? (
+              <div className="flex justify-end relative bottom-28">
+                <button
+                  onClick={onClickDelete}
+                  className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+                >
+                  削除
+                </button>
+              </div>
+            ) : null}
           </div>
           <div className="w-full mb-10">
             <p className=" -order-1 text-base text-black-600 -mt-14 m-10">
@@ -60,14 +70,6 @@ export const DataPost = ({ post }) => {
             ) : (
               <div></div>
             )}
-            {user?._id === post.user._id ? (
-              <button
-                onClick={onClickDelete}
-                className="text-xs text-gray-500 dark:text-gray-300 text-center"
-              >
-                削除
-              </button>
-            ) : null}
           </div>
           <div className="flex justify-around  items-center">
             <Link to={`/findPost/${post._id}`}>

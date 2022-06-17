@@ -1,12 +1,10 @@
 import axios from "axios";
 
 export const uploadImages = async (formData, path) => {
-  const UPLOAD_API_URL =
-    process.env.REACT_APP_API_URL_UPLOAD ||
-    process.env.REACT_APP_API_URL_UPLOAD_PRODUCTION;
+  const UPLOAD_API_URL = process.env.REACT_APP_API_URL_UPLOAD;
   try {
     const { data } = await axios.post(
-      UPLOAD_API_URL + `/uploadImage`,
+      UPLOAD_API_URL + `uploadImage`,
       formData,
       {
         headers: {
