@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FollowingsList } from "../../components/follow/FollowingsList";
 import { getFollowings, reset } from "../../redux/slice/users/usersSlice";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
