@@ -77,7 +77,9 @@ export const Profile = () => {
           <div className="flex container items-center justify-start">
             <Link to={"/followings/" + params?.id}>
               <p className=" ml-4 mb-7 text-bold cursor-pointer">
-                {Array.isArray(users?.followings) ? users.followings.length : 0}
+                {Array.isArray(users?.followings)
+                  ? users?.followings.length
+                  : 0}
                 フォロー中
               </p>
             </Link>
