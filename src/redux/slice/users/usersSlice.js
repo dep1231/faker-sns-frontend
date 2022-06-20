@@ -141,7 +141,7 @@ export const usersSlice = createSlice({
       .addCase(pushFollow.fulfilled, (state, action) => {
         state.isLoading = false;
         state.success = true;
-        state.users.followings.push(action.payload);
+        state.users.followers.push(action.payload);
       })
       .addCase(pushFollow.rejected, (state, action) => {
         state.isLoading = false;
@@ -155,7 +155,7 @@ export const usersSlice = createSlice({
       .addCase(pullFollow.fulfilled, (state, action) => {
         state.isLoading = false;
         state.success = true;
-        state.users.followings.pop(action.payload);
+        state.users.followers.pop(action.payload);
       })
       .addCase(pullFollow.rejected, (state, action) => {
         state.isLoading = false;

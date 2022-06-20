@@ -48,11 +48,11 @@ export const Header = () => {
         <div className="w-1/2 h-full flex items-center justify-end">
           {user ? (
             <>
-              <div className="py-4 cursor-pointer mr-8">
+              <div className="py-4 cursor-pointer mr-1">
                 <Link to={"/profile/" + user._id}>
                   <img
                     alt=""
-                    className="h-12 rounded-full hover:opacity-75 cursor-pointer"
+                    className="h-10 w-10 object-cover rounded-full hover:opacity-75 cursor-pointer"
                     src={user?.picture}
                   />
                 </Link>

@@ -35,9 +35,9 @@ export const Profile = () => {
     };
   }, [user, navigate, isError, message, dispatch]);
 
-  if (isLoading) {
-    return <Spinner />;
-  }
+  // if (isLoading) {
+  //   return <Spinner />;
+  // }
   const onClickFollow = () => {
     dispatch(pushFollow({ userId: user._id, paramsId: params.id }));
   };
@@ -61,7 +61,11 @@ export const Profile = () => {
           </div>
 
           <div className="-mt-20 flex justify-center">
-            <img alt="" className="h-32 rounded-full" src={users?.picture} />
+            <img
+              alt=""
+              className="h-32 w-32 object-cover rounded-full"
+              src={users?.picture}
+            />
           </div>
           <div className="flex justify-center items-center  mt-5 mb-1 px-3 text-center text-lg">
             {users?.username}
@@ -91,7 +95,7 @@ export const Profile = () => {
             </Link>
             {user?._id !== users?._id && user?._id ? (
               <>
-                {users?.followings?.includes(user?._id) ? (
+                {users?.followers?.includes(user?._id) ? (
                   <button
                     className="flex ml-48 relative bottom-3 border border-gray-200 bg-gray-200 text-gray-700 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-300 focus:outline-none focus:shadow-outline"
                     onClick={onClickUnfollow}

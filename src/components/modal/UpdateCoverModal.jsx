@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateUsers } from "../../redux/slice/users/usersSlice";
 import { useParams } from "react-router-dom";
 import { uploadImages } from "../../functions/upload";
-import { getAllPosts } from "../../redux/slice/posts/postSlice";
+import { getAllPosts, getPosts } from "../../redux/slice/posts/postSlice";
 
 export const UpdateCoverModal = () => {
+  const params = useParams();
   const [fileValue, setFileValue] = useState();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
@@ -40,11 +41,11 @@ export const UpdateCoverModal = () => {
           };
           console.log(postData);
           dispatch(updateUsers(postData)).catch((err) => console.log(err));
-          dispatch(getAllPosts());
+          dispatch(getPosts(params.id));
         });
       } else {
         dispatch(updateUsers(postData));
-        dispatch(getAllPosts());
+        dispatch(getPosts(params.id));
       }
       // if (isLoading) {
       //   return <Spinner />;

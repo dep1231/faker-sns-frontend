@@ -47,7 +47,7 @@ export const DataPost = ({ post }) => {
               })}
             </div>
             {user?._id === post.user._id ? (
-              <div className="flex justify-end relative bottom-28">
+              <div className="flex justify-end -mb-14 item relative bottom-28">
                 <button
                   onClick={onClickDelete}
                   className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"

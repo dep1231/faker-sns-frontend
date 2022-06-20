@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateUsers } from "../../redux/slice/users/usersSlice";
 import { useParams } from "react-router-dom";
 import { uploadImages } from "../../functions/upload";
-import { getAllPosts } from "../../redux/slice/posts/postSlice";
+import { getPosts } from "../../redux/slice/posts/postSlice";
+import { Spinner } from "../spinner/Spinner";
 
 export const UpdateModal = () => {
-  const [fileValue, setFileValue] = useState();
+  const params = useParams();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-  const { users } = useSelector((state) => state.users);
+  const { users, isLoading } = useSelector((state) => state.users);
   const [modalOpen, setModalOpen] = useState(false);
   const {
     register,
@@ -43,15 +44,15 @@ export const UpdateModal = () => {
           };
           console.log(postData);
           dispatch(updateUsers(postData)).catch((err) => console.log(err));
-          dispatch(getAllPosts());
+          dispatch(getPosts(params.id));
         });
       } else {
         dispatch(updateUsers(postData));
-        dispatch(getAllPosts());
+        dispatch(getPosts(params.id));
       }
-      // if (isLoading) {
-      //   return <Spinner />;
-      // }
+      if (isLoading) {
+        return <Spinner />;
+      }
       setModalOpen(false);
     } catch (error) {
       console.log(error);
@@ -100,9 +101,6 @@ export const UpdateModal = () => {
                         <input
                           type="file"
                           id="getFile"
-                          onChange={(e) => {
-                            setFileValue(e.target.files[0]);
-                          }}
                           {...register("files")}
                           className="hidden"
                         />
