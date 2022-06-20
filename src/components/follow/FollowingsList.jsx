@@ -1,14 +1,7 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { pullFollow } from "../../redux/slice/users/usersSlice";
-import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 export const FollowingsList = ({ user }) => {
-  const params = useParams();
-  const dispatch = useDispatch();
-  const onClickUnfollow = () => {
-    dispatch(pullFollow({ userId: user._id, paramsId: params.id }));
-  };
   return (
     <>
       <div className="flex items-center justify-center px-5 py-5 mt-10">

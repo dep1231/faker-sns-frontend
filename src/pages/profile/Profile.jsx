@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getPosts, reset } from "../../redux/slice/posts/postSlice";
-import { Spinner } from "../../components/spinner/Spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { DataPost } from "../../components/posts/DataPost";
 import {
@@ -19,9 +18,7 @@ export const Profile = () => {
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
 
-  const { posts, isLoading, isSuccess, isError, message } = useSelector(
-    (state) => state.post
-  );
+  const { posts, isError, message } = useSelector((state) => state.post);
   const { users } = useSelector((state) => state.users);
 
   useEffect(() => {

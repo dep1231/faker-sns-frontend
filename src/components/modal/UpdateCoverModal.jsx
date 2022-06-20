@@ -4,11 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateUsers } from "../../redux/slice/users/usersSlice";
 import { useParams } from "react-router-dom";
 import { uploadImages } from "../../functions/upload";
-import { getAllPosts, getPosts } from "../../redux/slice/posts/postSlice";
+import {  getPosts } from "../../redux/slice/posts/postSlice";
 
 export const UpdateCoverModal = () => {
   const params = useParams();
-  const [fileValue, setFileValue] = useState();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const { users } = useSelector((state) => state.users);
@@ -98,9 +97,6 @@ export const UpdateCoverModal = () => {
                         <input
                           type="file"
                           id="getCover"
-                          onChange={(e) => {
-                            setFileValue(e.target.files[0]);
-                          }}
                           {...register("files")}
                           className="hidden"
                         />
