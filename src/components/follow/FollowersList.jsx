@@ -24,8 +24,6 @@ export const FollowersList = (user) => {
               {user.user.desc}
             </p>
           </div>
-          <div></div>
-          <div className="w-full"></div>
         </div>
       </div>
     </>
