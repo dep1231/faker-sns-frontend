@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
+import { pullFollow, pushFollow } from "../../redux/slice/users/usersSlice";
 
 export const FollowersList = (user) => {
   return (
     <>
       <div className="flex items-center justify-center px-5 py-5 mt-10">
-        <div className="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
+        <div className="w-full mx-auto max-w-xl h-20 rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
           <div className="w-full pt-1 text-center pb-5 -mt-16 mx-auto">
             <Link to={`/profile/${user.user._id}`}>
               <img
@@ -24,6 +26,7 @@ export const FollowersList = (user) => {
               {user.user.desc}
             </p>
           </div>
+          <div></div>
           <div className="w-full"></div>
         </div>
       </div>

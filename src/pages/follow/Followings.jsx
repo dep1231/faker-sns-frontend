@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FollowersList } from "../../components/follow/FollowersList";
+import { FollowingsList } from "../../components/follow/FollowingsList";
 import { getFollowings, reset } from "../../redux/slice/users/usersSlice";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { FollowersList } from "../../components/follow/FollowersList";
 
 export const Followings = () => {
   const { users } = useSelector((state) => state.users);

@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { pullFollow } from "../../redux/slice/users/usersSlice";
+import { useDispatch } from "react-redux";
 
-export const Followings = ({ user }) => {
-  console.log(user);
+export const FollowingsList = ({ user }) => {
+  const params = useParams();
+  const dispatch = useDispatch();
+  const onClickUnfollow = () => {
+    dispatch(pullFollow({ userId: user._id, paramsId: params.id }));
+  };
   return (
     <>
       <div className="flex items-center justify-center px-5 py-5 mt-10">
@@ -25,7 +31,6 @@ export const Followings = ({ user }) => {
               {user.user.desc}
             </p>
           </div>
-          <div className="w-full"></div>
         </div>
       </div>
     </>
