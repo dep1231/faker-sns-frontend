@@ -30,6 +30,16 @@ export const DataPost = ({ post }) => {
     <>
       <div className="flex items-center justify-center px-5 py-5 mt-10">
         <div className="w-full mx-auto max-w-lg rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
+          {user?._id === post.user._id ? (
+            <div className="flex justify-end items-center -mb-14">
+              <button
+                onClick={onClickDelete}
+                className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+              >
+                削除
+              </button>
+            </div>
+          ) : null}
           <div className="w-full pt-1 text-center pb-5 -mt-16 mx-auto">
             <Link to={`/profile/${post.user._id}`}>
               <img
@@ -46,16 +56,6 @@ export const DataPost = ({ post }) => {
                 timeZone: "Asia/Tokyo",
               })}
             </div>
-            {user?._id === post.user._id ? (
-              <div className="flex justify-end -mb-14 item relative bottom-28">
-                <button
-                  onClick={onClickDelete}
-                  className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
-                >
-                  削除
-                </button>
-              </div>
-            ) : null}
           </div>
           <div className="w-full mb-10">
             <p className=" -order-1 text-base text-black-600 -mt-14 m-10">
@@ -87,7 +87,7 @@ export const DataPost = ({ post }) => {
                 <div className="ml-1">{post?.likes?.length}</div>
               </div>
             ) : (
-              <div className="flex">
+              <div className="flex cursor-pointer">
                 <button onClick={onClickPushLike}>
                   <AiOutlineHeart size={25} />
                 </button>

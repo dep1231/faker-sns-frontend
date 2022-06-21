@@ -47,11 +47,14 @@ export const Profile = () => {
       <div className="container max-w-full ">
         <div className="m-auto  w-full max-w-xl items-center justify-center overflow-hidden rounded-2xl shadow-xl">
           <div className="h-48 bg-slate-200">
-            <img
-              src={users?.cover}
-              alt=""
-              className="h-48 w-full object-cover"
-            />
+            {!user.cover ? null : (
+              <img
+                src={users?.cover}
+                alt=""
+                className="h-48 w-full object-cover"
+              />
+            )}
+
             <div className="flex justify-end relative right-4">
               {user?._id === users?._id ? <UpdateCoverModal /> : null}
             </div>
@@ -70,7 +73,7 @@ export const Profile = () => {
           <div className="relative bottom-12 flex justify-end items-stretch mr-10 mb-10">
             {user?._id === users?._id ? <UpdateModal /> : null}
           </div>
-          <div className="flex justify-start relative bottom-14 ml-1">
+          <div className="flex justify-start relative bottom-10 ml-1">
             <div className="mb-5 px-3 text-center text-gray-500">
               {users?.profile}
             </div>
@@ -106,7 +109,7 @@ export const Profile = () => {
                   >
                     フォロー
                   </button>
-                )}{" "}
+                )}
               </>
             ) : null}
           </div>

@@ -70,7 +70,7 @@ export const Header = () => {
             <>
               <div className="py-4 cursor-pointer mr-2">
                 <button
-                  className="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
+                  className="sm:w-36 sm:h-12 border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline"
                   onClick={onClickLogin}
                 >
                   簡単ログイン
@@ -78,14 +78,14 @@ export const Header = () => {
               </div>
               <div className="py-4 cursor-pointer mr-2">
                 <Link to="/register">
-                  <button className="border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
+                  <button className="sm:w-36 sm:h-12 border border-indigo-500 bg-indigo-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-indigo-600 focus:outline-none focus:shadow-outline">
                     新規登録
                   </button>
                 </Link>
               </div>
               <div className="py-4 cursor-pointer mr-4">
                 <Link to="/login">
-                  <button className="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline">
+                  <button className="sm:w-36 sm:h-12 border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline">
                     ログイン
                   </button>
                 </Link>

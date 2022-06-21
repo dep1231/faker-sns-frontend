@@ -11,7 +11,7 @@ export const FollowersList = (user) => {
               <img
                 alt=""
                 src={user.user.picture}
-                className="object-cover rounded-full h-14 w-14 "
+                className="object-cover rounded-full h-14 w-14 hover:opacity-75 cursor-pointer "
               />
             </Link>
             <div className="font-bold -mt-12 flex m-16">
