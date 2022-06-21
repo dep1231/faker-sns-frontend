@@ -47,7 +47,7 @@ export const Profile = () => {
       <div className="container max-w-full ">
         <div className="m-auto  w-full max-w-xl items-center justify-center overflow-hidden rounded-2xl shadow-xl">
           <div className="h-48 bg-slate-200">
-            {!user.cover ? null : (
+            {!users?.cover ? null : (
               <img
                 src={users?.cover}
                 alt=""
